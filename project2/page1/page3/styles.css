@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open sans";
+
+}
+
+.navbar ul {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    right: 0px;
+    overflow: hidden;
+    background-color: #00397b;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    box-shadow: 2px 2px 5px rgb(0,0,0,0.5) ;
+    
+    
+}
+.navbar ul li{
+    list-style-type: none;
+     
+          
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    
+
+}
+.row{
+    width:80%;
+    min-height: 100px;
+    margin: auto;
+}
+.row1,.row3{
+    margin: 20px auto;
+    width: 80%;
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    
+
+}
+.content ul li{
+    line-height: 1.5rem;
+}
+
+.content .http{
+    width: 50%;
+    height: 35%;
+    margin: 20px auto ;
+    display: flex;
+    justify-content: center;
+}
+.content .get{
+    margin: auto;
+    width: 50%;
+    height: 25%;
+}
+
+
+
+.options{  display: flex; flex-direction: row}
+.navbar ul li{
+        list-style-type: none;
+ 
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    color:white;
+    font-weight: bold;
+    
+    
+
+}
+.active{
+    color: red;
+}
+.burger-button{ display: none;}
+
+.burger 
+{
+    
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px ;
+    
+    
+}
+
+.bread { background-color:white; height: 5px; width: 30px; margin: 5px; padding:1px ;}
+
+@media only screen and (max-width : 1050px){
+   .internet-image .header h1{
+        font-size:85px;
+        bottom: 15%;
+    }
+
+
+   
+}
+@media only screen and (max-width : 1000px){
+    .internet-image .header h1{
+        display: none;
+        
+     }
+     .internet-image button i{
+        display: none;
+    }
+ }
+ @media only screen and (max-width : 610px){
+     
+    .navbar ul .options{ display: none;}
+    .burger-button{display: block;}
+ } 
+
+ 

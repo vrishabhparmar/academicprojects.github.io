@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open sans"; 
+    
+}
+
+
+.navbar ul {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    right: 0px;
+    overflow: hidden;
+    background-color: #00397b;
+    width: 100%;
+    display: flex;
+    
+    flex-direction: row;
+    box-shadow: 2px 2px 5px rgb(0,0,0,0.5) ;
+    
+    
+}
+
+
+.navbar ul li{
+    list-style-type: none;
+     
+          
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    
+
+}
+.row{
+    width:80%;
+    min-height: 80px;
+    margin: auto;
+}
+.row .header{
+    font-size: 54px;
+    color: #00397b;
+}
+
+.row1,.row2, .row3{
+
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    width:80%;
+    min-height: 400px;
+    margin: 50px auto;
+    border-bottom:1px solid lightgray;
+    overflow: hidden;
+    
+    
+
+    
+   
+}
+
+.content{
+    padding: 15px;
+    
+}
+.content figure figcaption h1{
+    color:#00397b;
+}
+figure img{
+    margin: auto;
+} 
+.content p{
+    margin-left: 35px;
+    line-height: 1.5rem;
+}
+
+
+.options{  display: flex; flex-direction: row}
+
+.burger-button{ display: none;}
+
+.burger 
+{
+    
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px ;
+    
+    
+}
+
+.bread { background-color:white; height: 5px; width: 30px; margin: 5px; padding:1px ;}
+
+@media only screen and (max-width : 1050px){
+   .internet-image .header h1{
+        font-size:85px;
+        bottom: 15%;
+    }
+
+
+   
+}
+@media only screen and (max-width : 1000px){
+    .internet-image .header h1{
+        display: none;
+        
+     }
+     .internet-image button i{
+        display: none;
+    }
+ }
+ @media only screen and (max-width : 610px){
+     
+    .navbar ul .options{ display: none;}
+    .burger-button{display: block;}
+ } 
+

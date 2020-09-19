@@ -1,0 +1,140 @@
+body{
+    margin: auto;
+    padding: 0;
+    font-family: "Open sans";
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+
+
+.navbar ul {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    right: 0px;
+    overflow: hidden;
+    background-color: #01073cba;
+    display: flex;
+    flex-direction: row;
+    
+    
+    width: 100%;
+    
+    box-shadow: 2px 2px 5px rgb(0,0,0,0.5) ;
+    
+}
+
+.options{  display: flex; flex-direction: row}
+.navbar ul li{
+        list-style-type: none;
+ 
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    color:white;
+    font-weight: bold;
+    
+    
+
+}
+.active{
+    color: red;
+}
+.burger-button{ display: none;}
+
+.burger 
+{
+    
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px ;
+    
+    
+}
+
+.bread { background-color:white; height: 5px; width: 30px; margin: 5px; padding:1px ;}
+
+@media only screen and (max-width : 1050px){
+   .internet-image .header h1{
+        font-size:85px;
+        bottom: 15%;
+    }
+
+
+   
+}
+@media only screen and (max-width : 1000px){
+    .internet-image .header h1{
+        display: none;
+        
+     }
+     .internet-image button i{
+        display: none;
+    }
+ }
+ @media only screen and (max-width : 610px){
+     
+    .navbar ul .options{ display: none;}
+    .burger-button{display: block;}
+ } 
+
+ 
+.internet-image{
+    display: flex;
+    justify-content: center; 
+    width:100%;  
+}
+.internet-image img{
+    padding: 0;
+   margin: auto;
+   width:100%; 
+ 
+}
+.header h1{
+    position: absolute;
+    bottom: 10%;
+    left:8%;
+    color: white;
+    font-size: 100px;
+    text-align: left;
+    
+}
+
+.row1,.row2, .row3{
+    width:80%;
+    min-height: 700px;
+    margin: auto;
+    border-bottom:1px solid lightgray;
+}
+.content h1{
+    font-size: 80px;
+    color: #00397b;
+   
+}
+.content h2{
+    font-size: 50px;
+    color: #f95f05;
+   
+}
+.content h3{
+    
+}
+.content p{
+    line-height: 1.5rem;
+}
+.content-list .points p{
+    line-height: 1.5rem;
+}
+
+
+
+

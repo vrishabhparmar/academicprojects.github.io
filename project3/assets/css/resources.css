@@ -1,0 +1,32 @@
+
+.upperpadding{
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 200px;
+    
+    margin: auto;
+
+}
+
+.content2 {
+    /* border: 1px solid black; */
+    width: 80%;
+    min-height: 500px;
+    display: grid;
+    grid-gap: 20px;
+    margin: 50px auto;
+    
+    
+    grid-template-columns: 100%;
+    overflow: hidden;
+}
+
+.content2 h1{
+    font-size: 40px;
+    padding: 15px;
+    color: #663300cc;
+}
+.content2 p{
+    line-height: 30pt ;
+    padding: 15px;
+}

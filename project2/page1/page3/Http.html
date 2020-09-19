@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>HTTP</title>
+</head>
+<body>
+    <div class="navbar">
+                <ul>
+                    <div class="burger-button">
+                        <div class="burger">s
+                            <div class="bread"></div>
+                            <div class="bread"></div>
+                            <div class="bread"></div>
+                        </div>
+                    </div>
+                    <li><a href="../index.html" >Home</a></li>
+                    <li><a href="../page2/pioneers.html">Pioneers</a></li>
+                    <li><a href="">http</a></li>
+                    <li><a href="../page4/terminology.html">Terminology</a></li>
+                    
+                </ul>
+                
+    </div>
+    <div class="row">
+           
+    </div>
+    <div class="row1">
+        <div class="content">
+            <h1>How a simple HTML page is requested by a client and served up by a web serve</h1>
+        </div>
+    </div>
+    <div class="row1">
+            <div class="content">
+                <h1>It is a step by step process which results into final desired Web page.</h1>
+            </div>
+    </div>
+    <div class="row3">
+        <div class="content">
+            <h3>1. The first step is you type an address of the web page in the address bar of the browser</h3>
+            <br>
+            <h3>2. The browser checks the cache of the DNS records to find the disired address is present in the 
+                records to return the corresponding IP address</h3>
+                <ul>
+                    <li>DNS (Domain Naming System) is a collection of URLs and its corrsponding IP address. Every URL on
+                        the internet has a unique IP address. Each IP address belongs to the computer which host the server 
+                        of the website we are requesting the access for. 
+                    </li>
+                    <li>For an example, www.google.com has an IP address of 209.85.227.104. So if you just type
+                        http://209.85.227.104 you can reach out the google web page.
+                    </li>
+                    <li>In order to find a particular DNS record browser checks four caches</li>
+                    <ul>
+                        <li>First it checks the browsers cache. The browser cache keeps the record of the previously 
+                            visited websites. So this would be the first place to run a particular DNs query. 
+                        </li>
+                        <li>If we fail to find the required URL or IP address in the browser cache then the second type of cache is 
+                            approched. Your browser will make a system call (i.e gethostName) to your computer OS because 
+                            your computer OS also maintains cache of DNS records. 
+                        </li>
+                        <li>
+                                If we fail to find the required URL or IP address in the OS cache then the third type of cache is 
+                                approched. The router cache. It is not found on your computer rather the computer will communicate the router
+                                to chech its cache of DNS records.
+                        </li>
+                        <li>
+                            Fourth cache which is checked is the ISP cache. ISP i.e Internet Service Provider maintains DNS cache
+                            which can be fetched if all three caches doens't contain our required match of URL.
+                        </li>
+                    </ul>
+                    
+                    
+                </ul>
+            
+            <h3>3. If the IPS cache doesn't contain the required IP address then the ISP's DNS server initiates the DNS 
+                query to find the IP address of the server who host www,google.com 
+            </h3>
+            <ul>
+                <li>As we already know so far that in order to access a particular web page we require the IP address of 
+                    that website. Here the ISP generated DNS query requests different servers if they contain the IP address
+                    of the required website in our case www.google.com. This type of searching mechanism is called recursive search. 
+                </li>
+                <li>
+                    Here the query is treated part by part starting with the Root Level and then Top Level Domain name and so on.   
+                </li>
+            </ul>
+            <img src="http.png" alt="http" class="http">
+            <ul>
+                <li>Each of this Levels contain their own name server which is queried during lookup process </li>
+                <li>These requests are sent using small data packets which contain information such as the content of the request 
+                    and the IP address it is destined for (IP address of the DNS recursor). These packets travel through multiple networking equipment between the client and the server before it reaches the correct DNS server. This equipment use routing tables to figure out which way is the fastest possible way for the packet to reach its’ destination. If these packets get lost you’ll get a request failed error. Otherwise, they will reach the correct DNS server,
+                     grab the correct IP address, and come back to your browser.
+                </li>
+                
+            </ul>
+            <h3>3. Once the desired IP address is found the client machine initiates the TCP connection with 
+                the server.
+            </h3>
+            <ul>
+                <li>TCP/IP i.e Transfer Control Protocol and Internet Protocol is the one of the most commonly used internet 
+                    protocol. It is a three way handshake process. Here the client machine first sends he SYN(synchronize) message to the server
+                    to start the connection. Then the server sends the ACK/SYN(acknowledge/syschronize) message to estavlish a connection.
+                    In return client machine replies with ACK message. Hence the TCP connection is generated. Know both are ready for the exchange of information. 
+                </li>
+
+            </ul>
+            <h3>4. The browser sends an http request to the server requesting for the desired web page</h3>
+            <ul>
+                <li>The browser will send a GET request asking for www.google.com web page. </li>
+                <li>Sample get request is shown below</li>
+            </ul>
+            <figure>
+                <img src="get.png" alt="getrequestimage" class="get">
+                <figcaption style="text-align: center;"> GET request</figcaption>
+            </figure>
+            <h3>5. The server handles the request and sends the requested page.</h3>
+            <h3>6. The browser then renders that particular page on the screen</h3>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
